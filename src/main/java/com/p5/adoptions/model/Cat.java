@@ -6,4 +6,15 @@ package com.p5.adoptions.model;
             {
                 super(name, photoUrl);
             }
+
+            public void iAmACat()
+            {
+                System.out.println("Cats are special!");
+            }
+            @Override
+
+            public void speak()
+            {
+                System.out.println("Cat speaks!");
+            }
         }

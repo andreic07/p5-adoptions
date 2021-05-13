@@ -21,7 +21,10 @@ public abstract class Animal
 
         }
 
-        protected abstract void walk();
+        protected void walk()
+        {
+            System.out.println("Animal walks !");
+        }
 
 
         public String getName()
