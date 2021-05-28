@@ -1,4 +1,4 @@
-package com.p5.adoptions.controllers;
+package com.p5.adoptions.api.controllers;
 
 import com.p5.adoptions.model.Animal;
 import com.p5.adoptions.repository.AnimalStore;
