@@ -1,10 +1,10 @@
 package com.p5.adoptions.model;
 
-    public class Cat extends Animal
+    public class CatDTO extends Animal
         {
-            public Cat(String name, String photoUrl)
+            public CatDTO(String name, String photoUrl, Integer id)
             {
-                super(name, photoUrl);
+                super(name, photoUrl, id);
             }
 
             public void iAmACat()
