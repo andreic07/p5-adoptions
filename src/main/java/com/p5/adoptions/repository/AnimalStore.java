@@ -2,7 +2,7 @@
 package com.p5.adoptions.repository;
 
 
-import com.p5.adoptions.model.Animal;
+import com.p5.adoptions.model.AnimalDTO;
 import com.p5.adoptions.model.CatDTO;
 import com.p5.adoptions.model.DogDTO;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public class AnimalStore
 
     {
-        public static final List<Animal> available = new ArrayList<Animal>()
+        public static final List<AnimalDTO> available = new ArrayList<AnimalDTO>()
         {{
             add(new DogDTO("Alfi","https://www.colecteaza.ro/wp-content/uploads/2018/05/dog.jpg", 4));
             add(new DogDTO("Max","https://cdn.mos.cms.futurecdn.net/QjuZKXnkLQgsYsL98uhL9X-1200-80.jpg", 5));

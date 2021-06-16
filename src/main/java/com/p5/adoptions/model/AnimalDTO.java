@@ -1,6 +1,6 @@
 package com.p5.adoptions.model;
 
-public abstract class Animal
+public class AnimalDTO
 
     {
         protected Integer id;
@@ -8,7 +8,7 @@ public abstract class Animal
         protected String photoUrl;
 
 
-        public Animal(String name, String photoUrl, Integer id)
+        public AnimalDTO(String name, String photoUrl, Integer id)
 
         {
             this.name = name;
@@ -33,7 +33,7 @@ public abstract class Animal
             return this.name;
         }
 
-        public Animal setName(String newName)
+        public AnimalDTO setName(String newName)
         {
             this.name=newName;
             return this;
@@ -44,7 +44,7 @@ public abstract class Animal
             return photoUrl;
         }
 
-        public Animal setPhotoUrl(String photoUrl) {
+        public AnimalDTO setPhotoUrl(String photoUrl) {
             this.photoUrl = photoUrl;
             return this;
         }
@@ -53,7 +53,7 @@ public abstract class Animal
             return id;
         }
 
-        public Animal setId(Integer id) {
+        public AnimalDTO setId(Integer id) {
             this.id = id;
             return this;
         }
