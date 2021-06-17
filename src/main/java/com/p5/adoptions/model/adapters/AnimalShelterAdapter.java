@@ -3,6 +3,9 @@ package com.p5.adoptions.model.adapters;
 import com.p5.adoptions.model.AnimalShelterDTO;
 import com.p5.adoptions.repository.shelter.AnimalShelter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AnimalShelterAdapter
     {
         public static AnimalShelter fromDto(AnimalShelterDTO shelterDTO)
@@ -27,5 +30,14 @@ public class AnimalShelterAdapter
                     .setName(shelter.getName())
                     .setAnimals(AnimalAdapter.toListDto(shelter.getAnimals()));
         }
+    public static List<AnimalShelterDTO> toListDto (List<AnimalShelter> animals)
+    {
+        List<AnimalShelterDTO> dtos= new ArrayList<>();
+        for (AnimalShelter animalShelter: animals)
+        {
+            dtos.add(toDto(animalShelter));
+        }
+        return dtos;
+    }
 
     }

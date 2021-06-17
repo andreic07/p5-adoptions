@@ -5,6 +5,9 @@ import com.p5.adoptions.service.AnimalShelterService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.List;
+
 @RestController
 @RequestMapping("/v1/shelters")
 
@@ -18,6 +21,13 @@ public class AnimalShelterController
         this.shelterService = shelterService;
     }
 
+    @GetMapping
+    private ResponseEntity<List<AnimalShelterDTO>> getAll()
+    {
+        return ResponseEntity.ok(shelterService.getAll());
+    }
+
+
     @GetMapping("/{id}")
     private ResponseEntity <AnimalShelterDTO> getShelter (@PathVariable("id") Integer id)
     {
@@ -26,9 +36,14 @@ public class AnimalShelterController
     }
 
     @PostMapping
-    private ResponseEntity<AnimalShelterDTO> createShelter(@RequestBody AnimalShelterDTO shelterDTO)
+    private ResponseEntity<AnimalShelterDTO> createShelter(@Valid @RequestBody AnimalShelterDTO shelterDTO)
     {
         return ResponseEntity.ok(shelterService.createShelter(shelterDTO));
+    }
+    @PutMapping
+    private ResponseEntity<AnimalShelterDTO> updateShelter(@RequestBody AnimalShelterDTO shelterDTO)
+    {
+        return ResponseEntity.ok(shelterService.updateShelter(shelterDTO));
     }
 
 }
