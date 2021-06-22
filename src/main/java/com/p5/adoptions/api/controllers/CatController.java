@@ -17,6 +17,8 @@ public class CatController
     }
 
     @GetMapping
+
+
     public ResponseEntity<ListDTO<CatDTO>> getAllCats()
     {
         return ResponseEntity.ok(catService.findAll());

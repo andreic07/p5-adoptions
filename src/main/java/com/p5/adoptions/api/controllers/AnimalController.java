@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/animals")
+
 public class AnimalController
     {
        // Old way: @RequestMapping(method = RequestMethod.GET, value = "/hello")
